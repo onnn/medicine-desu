@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "PFrvED1wGipVW0AGGDleRRetbUgFiVmOdTGoQTPMnV/qHg9AZLN3JLkwrKs3sZGL7glsee/K1t0jz3f8304QAA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Edgeworth\\source\\repos\\BodyTest1\\BodyTest1\\BodyTest1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Edgeworth\\.nuget\\packages\\accord\\3.8.0\\accord.3.8.0.nupkg.sha512",
+    "C:\\Users\\Edgeworth\\.nuget\\packages\\accord.math\\3.8.0\\accord.math.3.8.0.nupkg.sha512",
+    "C:\\Users\\Edgeworth\\.nuget\\packages\\accord.statistics\\3.8.0\\accord.statistics.3.8.0.nupkg.sha512",
+    "C:\\Users\\Edgeworth\\.nuget\\packages\\bogus\\29.0.2\\bogus.29.0.2.nupkg.sha512",
+    "C:\\Users\\Edgeworth\\.nuget\\packages\\quickgraph\\3.6.61119.7\\quickgraph.3.6.61119.7.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'QuickGraph 3.6.61119.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "QuickGraph",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
