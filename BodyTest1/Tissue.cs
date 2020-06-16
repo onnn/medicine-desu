@@ -9,8 +9,8 @@ namespace BodyTest1
 
     }
 
-    class epithelium : Tissue
+    class Epithelium : Tissue
     {
-        bool hyperplasia;
+
     }
 }

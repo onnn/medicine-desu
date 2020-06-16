@@ -11,6 +11,6 @@ namespace BodyTest1
 
     class Skin : Organ
     {
-
+        public Epithelium Epithelium {set; get;}
     }
 }
