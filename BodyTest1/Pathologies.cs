@@ -1,4 +1,5 @@
 ﻿using Accord.Statistics.Distributions.Univariate;
+using Bogus.DataSets;
 using System;
 
 namespace BodyTest1
@@ -44,16 +45,20 @@ namespace BodyTest1
          
         public IrritantContactDermatitis(Body body)
         {
+            Name = "Irritant Contact Dermatitis";
+            AlternateName = "ICD";
+            ICD10 = "L24";
             var rand = NormalDistribution.Random(0.5, 0.1);
             Console.WriteLine(rand);
             if (Probability >= 0.0)
             {
-                body.Features.Neck.symptom = new Rash();
+                body.Features.Neck.Symptoms.SymptomArray.Add(new Rash());
+                body.Features.Neck.Signs.SignArray.Add(new Erythema());
 
             }
             if (rand >= 0.5)
             {
-                body.Features.Neck.symptom = new Itching();
+                body.Features.Neck.Symptoms.SymptomArray.Add(new Itching());
             }
         }
     }

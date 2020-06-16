@@ -12,7 +12,7 @@ namespace BodyTest1
 {
     class Feature : Part
     {
-        public Epithelium epithelium { set; get; }
+        public Skins Skins { set; get; }
        
         public void ReadMessage()
         {
@@ -42,8 +42,6 @@ namespace BodyTest1
 
     class Neck : Feature
     {
-        public Symptom symptom;
-
         public Neck()
         {
             //Rash rash = new Rash();

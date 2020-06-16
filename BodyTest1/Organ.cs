@@ -4,9 +4,9 @@ using System.Text;
 
 namespace BodyTest1
 {
-    class Organs
+    class Organs : Part
     {
-        Skin skin = new Skin();
+
     }
 
     class Skin : Organ

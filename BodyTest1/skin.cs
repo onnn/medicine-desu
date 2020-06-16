@@ -4,10 +4,8 @@ using System.Text;
 
 namespace BodyTest1
 {
-    class Epithelium : Skin
+    class Skins
     {
 
     }
-
-
 }

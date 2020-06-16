@@ -54,6 +54,8 @@ namespace BodyTest1
     {
         public string ICD10 { set; get; }
         public double Probability { set; get; }
+        public string Name { set; get; }
+        public string AlternateName { set; get; }
         public Pathology()
         {
             Probability = 0.3;
