@@ -13,7 +13,7 @@ namespace BodyTest1
             Console.WriteLine("Hello World!\n");
             Body body = new Body();
             GeneratePathology generatePathology = new GeneratePathology(body);
-
+            
             Console.WriteLine(body.Record.Age);
 
             var key = Console.ReadKey().KeyChar;

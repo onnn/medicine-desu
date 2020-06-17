@@ -54,7 +54,7 @@ namespace BodyTest1
             {
                 body.Features.Neck.Symptoms.SymptomArray.Add(new Rash());
                 body.Features.Neck.Signs.SignArray.Add(new Erythema());
-
+                body.Features.Neck.Skins.Epidermis.Signs.SignArray.Add(new Erythema());
             }
             if (rand >= 0.5)
             {
