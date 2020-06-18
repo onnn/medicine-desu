@@ -13,6 +13,11 @@ namespace BodyTest1
     class Feature : Part
     {
         public Skins Skins { set; get; }
+
+        public Feature()
+        {
+            Skins = new Skins();
+        }
        
         public void ReadMessage()
         {

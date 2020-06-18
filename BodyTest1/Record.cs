@@ -9,7 +9,7 @@ namespace BodyTest1
         public string firstName { set; get; }
         public string lastName { set; get; }
         public string PhoneNumber { set; get; }
-\       public DateTime DateOfBirth {get; set; }
+       public DateTime DateOfBirth {get; set; }
         public int Age { set; get; }
         public string Address { set; get; }
         public string Sex { set; get; }

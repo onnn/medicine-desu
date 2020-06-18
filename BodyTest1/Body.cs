@@ -14,7 +14,6 @@ namespace BodyTest1
 
         public Pathologies Pathologies { get; set; } 
         public Record Record { get; set; }
-
         public Body()
         {
             Bones = new Bones();

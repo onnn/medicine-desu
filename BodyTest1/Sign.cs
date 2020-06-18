@@ -16,7 +16,13 @@ namespace BodyTest1
 
     class Signs
     {
-        public ArrayList SignArray; 
+        public ArrayList SignArray { set; get; }
+
+        public Signs()
+        {
+            SignArray = new ArrayList();
+        }
+
     }
 
 

@@ -7,11 +7,10 @@ namespace BodyTest1
 {
     class Symptoms
     {
-        public ArrayList SymptomArray; 
-        public Symptom symptom; 
+        public ArrayList SymptomArray { set; get; } 
         public Symptoms()
         {
-           
+            SymptomArray = new ArrayList();
         }
     }
 
