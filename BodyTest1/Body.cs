@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace BodyTest1
 {
     class Body
@@ -44,8 +45,15 @@ namespace BodyTest1
         public void PrintPatientData()
         {
             Console.WriteLine(Record.FirstName + " " + Record.LastName);
-            Console.WriteLine(Record.PhoneNumber); Console.WriteLine("\n");
-            Console.WriteLine(Record.Address); Console.WriteLine("\n");
+            Console.WriteLine("Sex: " + Record.Sex);
+            Console.WriteLine("Phone Number: " + Record.PhoneNumber);
+            Console.WriteLine("Address: " + Record.Address);
+            Console.WriteLine("Height: " + Record.Height);
+            Console.WriteLine("Weight: " + Record.Weight);
+            Console.WriteLine("Age: " + Record.Age);
+            Console.WriteLine("DOB: " + Record.DateOfBirth);
+            Console.WriteLine("Waist circumference: " + Record.Waistline);
+            Console.WriteLine("Race: " + Record.Race);
         }
     }
 
