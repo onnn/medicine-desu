@@ -53,6 +53,10 @@ namespace BodyTest1
 
     class Pores : Part
     {
+        //TODO: low sebum causes slightly higher infection chance
+        //decreases skin dryness
+        //increases body odor
+        //link with Proprionibacterium acnes presence
         public double SebumLevel { set; get; } //severity of sebum. 0 = abscence, 1 = pores overfull
 
         public Pores()

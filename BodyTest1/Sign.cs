@@ -11,6 +11,18 @@ namespace BodyTest1
         public string Name { get; set; }
         public string AlternateName { get; set; }
         public string InspectionMessage { get; set; }
+
+        public Sign()
+        {
+
+        }
+
+
+        public void AddSign(Body body)
+        {
+            body.Signs.SignArray.Add(this);
+            Console.WriteLine("helllllo");
+        }
         
     }
 
@@ -20,7 +32,9 @@ namespace BodyTest1
 
         public Signs()
         {
+            Console.WriteLine("SignArray created");
             SignArray = new ArrayList();
+
         }
 
     }
@@ -28,11 +42,17 @@ namespace BodyTest1
 
     class Erythema : Sign
     {
-        public Erythema()
+        public Erythema(Body body)
         {
             Name = "erythema";
-            InspectionMessage = "Upon examination, you discover erythema.";
+            AddSign(body);
         }
-        
+    }
+    class Edema : Sign
+    {
+        public Edema(Body body)
+        {
+            Name = "edema";
+        }
     }
 }

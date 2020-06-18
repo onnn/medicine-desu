@@ -14,6 +14,7 @@ namespace BodyTest1
         public VisualInspection(Part part)
         {
             Console.WriteLine(part.InspectionMessage);
+            
         }
     }
 }

@@ -11,6 +11,7 @@ namespace BodyTest1
         public Symptoms()
         {
             SymptomArray = new ArrayList();
+            
         }
     }
 

@@ -17,17 +17,30 @@ namespace BodyTest1
             Console.WriteLine(body.Record.Age);
 
             var key = Console.ReadKey().KeyChar;
-            key = Char.ToLower(key); 
+            key = char.ToLower(key); 
             if (key == 'i')
             {
                 Console.WriteLine("\n"); 
                 VisualInspection visualInspection = new VisualInspection(body.Features.Neck);
+               
+            }
+            else if (key == 's')
+            {
+                body.DisplayAllSymptoms();
             }
 
             body.WelcomeMessage();
         }
 
 
+    }
+
+    class Parts
+    {
+        public void UpdateSymptomList()
+        {
+
+        }
     }
 
     class System : Part
