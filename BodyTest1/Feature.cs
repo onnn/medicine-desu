@@ -49,9 +49,7 @@ namespace BodyTest1
     {
         public Neck()
         {
-            //Rash rash = new Rash();
             InspectionMessage = "Upon visually examining the Neck, you find a rash";
-            //rash.probabilty = NormalDistribution.Random(0.5,0.1);
         }
         
     }

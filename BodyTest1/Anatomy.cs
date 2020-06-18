@@ -22,11 +22,11 @@ namespace BodyTest1
             {
                 Console.WriteLine("\n"); 
                 VisualInspection visualInspection = new VisualInspection(body.Features.Neck);
-               
+                body.PrintPatientData();
             }
             else if (key == 's')
             {
-                body.DisplayAllSymptoms();
+                body.DisplayAllSigns();
             }
 
             body.WelcomeMessage();
@@ -37,10 +37,7 @@ namespace BodyTest1
 
     class Parts
     {
-        public void UpdateSymptomList()
-        {
 
-        }
     }
 
     class System : Part
