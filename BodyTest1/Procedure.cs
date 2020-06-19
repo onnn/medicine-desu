@@ -6,6 +6,11 @@ namespace BodyTest1
 {
     class Procedure
     {
+        public Procedure()
+        {
+            var str = Console.ReadLine();
+
+        }
 
     }
 
@@ -13,8 +18,9 @@ namespace BodyTest1
     {
         public VisualInspection(Part part)
         {
+
             Console.WriteLine(part.InspectionMessage);
-            
+            Console.WriteLine("test, part name should be above this");
         }
     }
 }

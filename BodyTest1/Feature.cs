@@ -1,6 +1,7 @@
 ﻿using Accord.Statistics.Distributions.Univariate;
 using BodyTest1;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
@@ -19,16 +20,12 @@ namespace BodyTest1
             Skins = new Skins();
         }
        
-        public void ReadMessage()
-        {
-            
-            //Console.WriteLine(message);
-            
-        }
     }
 
     class Features
     {
+       
+        public ArrayList FeatureArray { set; get; }
         public Neck Neck { set; get; }
         public Features()
         {
@@ -47,9 +44,10 @@ namespace BodyTest1
 
     class Neck : Feature
     {
+
         public Neck()
         {
-            InspectionMessage = "Upon visually examining the Neck, you find a rash";
+            Name = "neck";
         }
         
     }

@@ -7,7 +7,7 @@ namespace BodyTest1
 {
     class Part
     {
-        string Name { get; set; }
+        public string Name { get; set; }
         string AlternateName { get; set; }
         public Symptoms Symptoms { set; get; }
         public Signs Signs { set; get; }
@@ -17,6 +17,7 @@ namespace BodyTest1
         {
             Symptoms = new Symptoms();
             Signs = new Signs();
+
             InspectionMessage = "The " + Name + " has no apparent abnormality.";
 
         }

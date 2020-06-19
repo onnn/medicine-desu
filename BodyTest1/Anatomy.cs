@@ -3,6 +3,7 @@ using Accord;
 using Accord.Statistics.Distributions.Univariate;
 using System.Threading;
 using QuickGraph;
+using System.Collections.Generic;
 
 namespace BodyTest1
 {
@@ -10,26 +11,37 @@ namespace BodyTest1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!\n");
+            Console.WriteLine("Welcome to the medical patient simulator.\n");
             Body body = new Body();
             GeneratePathology generatePathology = new GeneratePathology(body);
-            
-            Console.WriteLine(body.Record.Age);
 
+            Console.WriteLine("Press i to visually inspect the patient");
+            Console.WriteLine("Press r to view the patient record"); 
             var key = Console.ReadKey().KeyChar;
-            key = char.ToLower(key); 
+            key = char.ToLower(key);
+            string input;
             if (key == 'i')
             {
-                Console.WriteLine("\n"); 
-                VisualInspection visualInspection = new VisualInspection(body.Features.Neck);
-                body.PrintPatientData();
+                Console.WriteLine("\n");
+                input = Console.ReadLine();
+
+
+                Dictionary<string, Part> openWith = new Dictionary<string, Part>();
+                openWith.Add("neck", body.Features.Neck);
+
+                openWith[input].Name = input;
+                VisualInspection visualInspection = new VisualInspection(openWith[input]);
+                Console.WriteLine(body.Features.Neck.Name);
             }
             else if (key == 's')
             {
-                body.DisplayAllSigns();
+                
             }
-
-            body.WelcomeMessage();
+            else if (key == 'r')
+            {
+                body.PrintPatientData();
+            }
+            
         }
 
 

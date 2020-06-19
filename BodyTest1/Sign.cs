@@ -21,7 +21,6 @@ namespace BodyTest1
         public void AddSign(Body body)
         {
             body.Signs.SignArray.Add(this);
-            Console.WriteLine("helllllo");
         }
         
     }
@@ -32,7 +31,6 @@ namespace BodyTest1
 
         public Signs()
         {
-            Console.WriteLine("SignArray created");
             SignArray = new ArrayList();
 
         }
