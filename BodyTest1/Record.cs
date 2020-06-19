@@ -7,6 +7,7 @@ namespace BodyTest1
 {
     class Record
     {
+
         public string FirstName { set; get; }
         public string LastName { set; get; }
         public string PhoneNumber { set; get; }
@@ -17,7 +18,10 @@ namespace BodyTest1
         public string Gender { set; get; }
         public string Race { set; get; }
         public double Weight { set; get; }
-        public double Height { set; get; }
+        public double WeightInLb { set; get; }
+        public double HeightInMeters { set; get; }
+        public double HeightFeet { set; get; }
+        public double HeightInches { set; get; }
         public double Waistline { set; get; }
         public string Insurance { set; get; }
         public string socialSecurityNumber { set; get; }
@@ -41,6 +45,9 @@ namespace BodyTest1
 
         public Record()
         {
+            
+
+
             var randombogus = new Bogus.DataSets.Name.Gender();
            
             var randomName = new Bogus.DataSets.Name("en");
@@ -95,17 +102,31 @@ namespace BodyTest1
 
             if (Sex == "male")
             {
-                Weight = NormalDistribution.Random(86, 13); //average values and stddev. source: google
-                Height = NormalDistribution.Random(1.8, 0.1);
-                Waistline = 1.0 + (Weight - 86); //in meters. since 1kg causes +/- 0.01m waistline. average just happens to be 1.0
+                //The multiplier makes taller people slightly heavier. Someone 1.9 meters will be about  8% heavier than someone that's 1.5 meters, compared to without the bonus. Make divisor smaller to make effect more extreme
+                HeightInMeters = NormalDistribution.Random(1.8, 0.3);
+                if (HeightInMeters < 2.0) { var heightWeightMultiplier = (1 + (HeightInMeters - 2.0) / 4.0); }
+                else { var heightWeightMultiplier = (2.0 + ((HeightInMeters -2.0)  / 4.0)); }
+                Weight = NormalDistribution.Random(86, 18); //average values and stddev. source: google
+                Waistline = 40 + ((Weight - 86) / 4); //you gain 1in / 4kg
             }
             else
             {
-                Weight = NormalDistribution.Random(78, 10);
-                Height = NormalDistribution.Random(1.65, 0.1);
-                Waistline = 1.0 + (Weight - 86); //in meters. since 1kg causes +/- 0.01m waistline. average just happens to be 1.0
+                HeightInMeters = NormalDistribution.Random(1.65, 0.3);
+                if (HeightInMeters < 2.0) { var heightWeightMultiplier = (1 + (HeightInMeters - 2.0) / 4.0); }
+                else { var heightWeightMultiplier = (2.0 + ((HeightInMeters - 2.0) / 4.0)); }
+
+                Weight = NormalDistribution.Random(78, 14);
+                Waistline = 36 + ((Weight - 86) / 4); //in meters. since 1kg causes +/- 0.01m waistline. average just happens to be 1.0
 
             }
+
+            //convert meters to ft/in
+            var inchFeet = (HeightInMeters / 0.3048);
+            HeightFeet = (int)inchFeet;
+            HeightInches = Math.Round((inchFeet - HeightFeet) / 0.0833);
+
+            //convert kg to pounds
+            WeightInLb = Weight * 2.20462; 
 
 
             FirstName = randomName.FirstName(randombogus);
@@ -133,7 +154,7 @@ namespace BodyTest1
             Console.WriteLine(DateOfBirth);
             Console.WriteLine(probability);
 
-            BMI = Weight / Math.Pow(Height,2); 
+            BMI = Weight / Math.Pow(HeightInMeters,2); 
             
         }
     }

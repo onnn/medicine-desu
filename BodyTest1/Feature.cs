@@ -13,6 +13,7 @@ namespace BodyTest1
 {
     class Feature : Part
     {
+        public string Name { set; get; }
         public Skins Skins { set; get; }
 
         public Feature()

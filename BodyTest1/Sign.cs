@@ -9,6 +9,8 @@ namespace BodyTest1
     class Sign
     {
         public string Name { get; set; }
+        public string SingularName { get; set; }
+        public string PluralName { get; set; }
         public string AlternateName { get; set; }
         public string InspectionMessage { get; set; }
 
@@ -51,6 +53,16 @@ namespace BodyTest1
         public Edema(Body body)
         {
             Name = "edema";
+        }
+    }
+
+    class Blister : Sign
+    {
+        public Blister (Body body)
+        {
+            Name = "blister";
+            NameSingular = "a blister"
+            NamePlural = "blisters"; 
         }
     }
 }

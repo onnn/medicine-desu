@@ -14,34 +14,9 @@ namespace BodyTest1
             Console.WriteLine("Welcome to the medical patient simulator.\n");
             Body body = new Body();
             GeneratePathology generatePathology = new GeneratePathology(body);
+            Interactive Interactive = new Interactive();
 
-            Console.WriteLine("Press i to visually inspect the patient");
-            Console.WriteLine("Press r to view the patient record"); 
-            var key = Console.ReadKey().KeyChar;
-            key = char.ToLower(key);
-            string input;
-            if (key == 'i')
-            {
-                Console.WriteLine("\n");
-                input = Console.ReadLine();
-
-
-                Dictionary<string, Part> openWith = new Dictionary<string, Part>();
-                openWith.Add("neck", body.Features.Neck);
-
-                openWith[input].Name = input;
-                VisualInspection visualInspection = new VisualInspection(openWith[input]);
-                Console.WriteLine(body.Features.Neck.Name);
-            }
-            else if (key == 's')
-            {
-                
-            }
-            else if (key == 'r')
-            {
-                body.PrintPatientData();
-            }
-            
+            Interactive.MainMenu(body);
         }
 
 

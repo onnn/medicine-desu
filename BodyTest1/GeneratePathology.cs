@@ -15,6 +15,7 @@ namespace BodyTest1
             if (NormalDistribution.Random(0.5,0.1) < 1.0)
             {
                 IrritantContactDermatitis irritantContactDermatitis = new IrritantContactDermatitis(body);
+                irritantContactDermatitis.Subtype = "acute"; 
             }
                
             if (body.Record.Age < 25 && NormalDistribution.Random(0.5 ,0.1) < 1.0)

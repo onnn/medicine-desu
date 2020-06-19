@@ -19,7 +19,6 @@ namespace BodyTest1
     {
         public Rash()
         {
-            Console.WriteLine("Patient complains of a rash.");
             
         }
     }
@@ -28,7 +27,6 @@ namespace BodyTest1
     {
         public Itching()
         {
-            Console.WriteLine("Patient complains of itchiness.");
         }
         
     }

@@ -18,8 +18,6 @@ namespace BodyTest1
             Symptoms = new Symptoms();
             Signs = new Signs();
 
-            InspectionMessage = "The " + Name + " has no apparent abnormality.";
-
         }
 
        

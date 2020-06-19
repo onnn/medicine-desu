@@ -23,7 +23,7 @@ namespace BodyTest1
     class IrritantContactDermatitis : Pathology
     {
         
-        public HashSet<string> Subtype { set; get; }
+        public string Subtype { set; get; }
 
         public IrritantContactDermatitis(Body body)
         {
@@ -32,7 +32,7 @@ namespace BodyTest1
             ICD10 = "L24";
             HashSet<string> Subtype = new HashSet<string>();
 
-            Subtype.Add("acute");
+            /*Subtype.Add("acute");
             Subtype.Add("acute delayed");
             Subtype.Add("Irritant reaction");
             Subtype.Add("cumulative");
@@ -40,7 +40,9 @@ namespace BodyTest1
             Subtype.Add("traumatic");
             Subtype.Add("subjective");
             Subtype.Add("airborne");
-            Subtype.Add("Frictional");
+            Subtype.Add("Frictional");*/
+
+            //The types. Not sure yet how to implement them. 
 
 
             var rand = NormalDistribution.Random(0.5, 0.1);
@@ -48,8 +50,10 @@ namespace BodyTest1
             if (Probability >= 0.0)
             {
                 Console.WriteLine("hello"); 
+                
                 body.Features.Neck.Symptoms.SymptomArray.Add(new Rash());
                 body.Features.Neck.Signs.SignArray.Add(new Erythema(body));
+                body.Features.Neck.Skins.Epidermis.Add(new Blister(body));
                 
             }
             if (rand >= 0.5)

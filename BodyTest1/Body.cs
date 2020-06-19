@@ -40,8 +40,8 @@ namespace BodyTest1
             Console.WriteLine("Sex: " + Record.Sex);
             Console.WriteLine("Phone Number: " + Record.PhoneNumber);
             Console.WriteLine("Address: " + Record.Address);
-            Console.WriteLine("Height: " + Record.Height);
-            Console.WriteLine("Weight: " + Record.Weight);
+            Console.WriteLine("Height: " + Record.HeightInMeters + "m - " + Record.HeightFeet + "ft " + Record.HeightInches + " in" );
+            Console.WriteLine("Weight: " + Record.Weight + "kg - " + Record.WeightInLb + "lb");
             Console.WriteLine("Age: " + Record.Age);
             Console.WriteLine("DOB: " + Record.DateOfBirth);
             Console.WriteLine("Waist circumference: " + Record.Waistline);
