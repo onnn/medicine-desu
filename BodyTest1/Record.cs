@@ -103,6 +103,8 @@ namespace BodyTest1
             {
                 Weight = NormalDistribution.Random(78, 10);
                 Height = NormalDistribution.Random(1.65, 0.1);
+                Waistline = 1.0 + (Weight - 86); //in meters. since 1kg causes +/- 0.01m waistline. average just happens to be 1.0
+
             }
 
 
