@@ -36,6 +36,16 @@ namespace BodyTest1
                 { "neck", this.Neck }
             };
         }
+        public void UpdateWounds(Feature feature)
+        {
+            foreach (Feature f in InputHash.Values)
+            {
+                foreach (Sign sign in feature.Skins.Epidermis.Signs.SignArray.ToArray())
+                {
+                    f.Signs.SignArray.Add(sign);
+                }
+            }
+        }
     }
         
 

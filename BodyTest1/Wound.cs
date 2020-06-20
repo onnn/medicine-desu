@@ -10,7 +10,6 @@ namespace BodyTest1
         public void AddWound(Body body)
         {
             body.Signs.SignArray.Add(this);
-            Console.WriteLine("helllllo");
         }
     }
 

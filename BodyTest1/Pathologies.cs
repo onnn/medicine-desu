@@ -47,26 +47,27 @@ namespace BodyTest1
 
             var rand = new Random();
             var location = rand.Next(0, 1);
+            Feature affectedFeature;
             
             if (Probability >= 0.0)
             {
-                Console.WriteLine("hello"); 
-              
-                switch (location)
+
+                affectedFeature = location switch
                 {
-                    case 1: Console.WriteLine("memes");
-                    default: Console.WriteLine(""); 
-                }
+                    0 => body.Features.Neck,
+                    _ => body.Features.Neck,
+                };
+                //affectedFeature.Skins.Epidermis.Signs.SignArray.Add(new Blister(body));
                // body.Features.Neck.Symptoms.SymptomArray.Add(new Rash());
                 //body.Features.Neck.Signs.SignArray.Add(new Erythema(body));
                 //body.Features.Neck.Skins.Epidermis.Add(new Blister(body));
                 
             }
-            if (rand >= 0.5)
-            {
+            //if (rand >= 0.5)
+           // {
                 //body.Features.Neck.Symptoms.SymptomArray.Add(new Itching());
                 //body.Features.Neck.Signs.SignArray.Add(new Edema(body));
-            }
+            //}
         }
 
 

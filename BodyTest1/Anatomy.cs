@@ -11,6 +11,7 @@ namespace BodyTest1
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("Welcome to the medical patient simulator.\n");
             Body body = new Body();
             GeneratePathology generatePathology = new GeneratePathology(body);

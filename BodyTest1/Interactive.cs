@@ -12,7 +12,7 @@ namespace BodyTest1
             bool tryAgain = true;
             while (tryAgain == true)
             {
-
+                body = new Body();
                 Console.WriteLine("Press i to visually inspect the patient");
                 Console.WriteLine("Press r to view the patient record");
                 var key = Console.ReadKey().KeyChar;
@@ -37,13 +37,19 @@ namespace BodyTest1
                 }
                 else if (key == 's')
                 {
-
+                    foreach (Sign sign in body.Features.Neck.Signs.SignArray)
+                    {
+                        Console.WriteLine(sign.ToString()); 
+                    }
                 }
                 else if (key == 'r')
                 {
-                    tryAgain = false;
                     body.PrintPatientData();
 
+                }
+                else if (key == 'q')
+                {
+                    tryAgain = false;
                 }
             }
         }

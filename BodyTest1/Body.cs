@@ -46,6 +46,7 @@ namespace BodyTest1
             Console.WriteLine("DOB: " + Record.DateOfBirth);
             Console.WriteLine("Waist circumference: " + Record.Waistline);
             Console.WriteLine("Race: " + Record.Race);
+            Console.WriteLine("BMI: " + Record.BMI); 
         }
     }
 
