@@ -25,14 +25,17 @@ namespace BodyTest1
 
     class Features
     {
-       
-        public ArrayList FeatureArray { set; get; }
+
+        public Dictionary<string, Feature> InputHash{set; get; }
         public Neck Neck { set; get; }
         public Features()
         {
             Neck = new Neck();
+            InputHash = new Dictionary<string, Feature>
+            {
+                { "neck", this.Neck }
+            };
         }
-
     }
         
 
@@ -49,8 +52,10 @@ namespace BodyTest1
         public Neck()
         {
             Name = "neck";
+            InspectionMessage = "You visually examine the neck"; 
+
         }
-        
+
     }
 
     class LeftEar : Feature

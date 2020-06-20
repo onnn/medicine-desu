@@ -8,18 +8,11 @@ namespace BodyTest1
     {
         public Epidermis Epidermis { set; get; }
         public Dermis Dermis { set; get; }
-        public SubcutaneousTissue  SubcutaneousTissue {set; get;}
         public HairFollicles HairFollicles { set; get; }
         public SebaceousGlands SebaceousGlands { set; get; }
         public Pores Pores { set; get; }
         public Skins()
         {
-            Epidermis = new Epidermis();
-            Dermis = new Dermis();
-            SubcutaneousTissue = new SubcutaneousTissue();
-            HairFollicles = new HairFollicles();
-            SebaceousGlands = new SebaceousGlands();
-            Pores = new Pores();
         }
 
     }
@@ -27,7 +20,10 @@ namespace BodyTest1
 
     class Epidermis : Part
     {
-
+        public Epidermis(Body body)
+        {
+            //body.Features.Neck.Skins.Epidermis
+        }
     }
 
     class Dermis : Part

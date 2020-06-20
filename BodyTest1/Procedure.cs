@@ -8,7 +8,6 @@ namespace BodyTest1
     {
         public Procedure()
         {
-            var str = Console.ReadLine();
 
         }
 
@@ -16,11 +15,10 @@ namespace BodyTest1
 
     class VisualInspection : Procedure
     {
-        public VisualInspection(Part part)
+        public VisualInspection(Feature feature)
         {
+            Console.WriteLine(feature.InspectionMessage);
 
-            Console.WriteLine(part.InspectionMessage);
-            Console.WriteLine("test, part name should be above this");
         }
     }
 }

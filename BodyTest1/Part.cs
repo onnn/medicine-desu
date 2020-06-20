@@ -15,9 +15,9 @@ namespace BodyTest1
 
         public Part()
         {
+
             Symptoms = new Symptoms();
             Signs = new Signs();
-
         }
 
        

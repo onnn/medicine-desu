@@ -45,21 +45,27 @@ namespace BodyTest1
             //The types. Not sure yet how to implement them. 
 
 
-            var rand = NormalDistribution.Random(0.5, 0.1);
-            Console.WriteLine(rand);
+            var rand = new Random();
+            var location = rand.Next(0, 1);
+            
             if (Probability >= 0.0)
             {
                 Console.WriteLine("hello"); 
-                
-                body.Features.Neck.Symptoms.SymptomArray.Add(new Rash());
-                body.Features.Neck.Signs.SignArray.Add(new Erythema(body));
-                body.Features.Neck.Skins.Epidermis.Add(new Blister(body));
+              
+                switch (location)
+                {
+                    case 1: Console.WriteLine("memes");
+                    default: Console.WriteLine(""); 
+                }
+               // body.Features.Neck.Symptoms.SymptomArray.Add(new Rash());
+                //body.Features.Neck.Signs.SignArray.Add(new Erythema(body));
+                //body.Features.Neck.Skins.Epidermis.Add(new Blister(body));
                 
             }
             if (rand >= 0.5)
             {
-                body.Features.Neck.Symptoms.SymptomArray.Add(new Itching());
-                body.Features.Neck.Signs.SignArray.Add(new Edema(body));
+                //body.Features.Neck.Symptoms.SymptomArray.Add(new Itching());
+                //body.Features.Neck.Signs.SignArray.Add(new Edema(body));
             }
         }
 

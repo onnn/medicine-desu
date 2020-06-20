@@ -61,8 +61,8 @@ namespace BodyTest1
         public Blister (Body body)
         {
             Name = "blister";
-            NameSingular = "a blister"
-            NamePlural = "blisters"; 
+            SingularName = "a blister";
+            PluralName = "blisters"; 
         }
     }
 }

@@ -6,6 +6,7 @@ namespace BodyTest1
 {
     class Interactive
     {
+
         public void MainMenu(Body body)
         {
             bool tryAgain = true;
@@ -14,23 +15,22 @@ namespace BodyTest1
 
                 Console.WriteLine("Press i to visually inspect the patient");
                 Console.WriteLine("Press r to view the patient record");
-
                 var key = Console.ReadKey().KeyChar;
                 key = char.ToLower(key);
-                string input;
+                string input; 
+                
                 if (key == 'i')
                 {
                     Console.WriteLine("\n");
-                    input = Console.ReadLine();
+                   
 
 
-                    Dictionary<string, Part> openWith = new Dictionary<string, Part>();
-                    openWith.Add("neck", body.Features.Neck);
+
 
                     try
                     {
-                        //openWith[input].Name = input;
-                        VisualInspection visualInspection = new VisualInspection(openWith[input]);
+
+                        VisualInspection visualInspection = new VisualInspection(body.Features.InputHash[input = Console.ReadLine()]);
                         tryAgain = false;
                     }
                     catch { Console.WriteLine("Try a valid bodypart"); }
