@@ -156,7 +156,6 @@ namespace BodyTest1
             DateOfBirth = start.AddDays(gen.Next(rangeMin,rangeMax));
             Age = DateTime.Today.Year - DateOfBirth.Year;
             if (DateOfBirth.Date > DateTime.Today.AddYears(-Age)) Age--;
-            Console.WriteLine(DateOfBirth);
 
             BMI = Weight / Math.Pow(HeightInMeters,2); 
             

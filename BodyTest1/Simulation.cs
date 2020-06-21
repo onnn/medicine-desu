@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace BodyTest1
 {
-    class Anatomy
+    class Simulation
     {
         static void Main(string[] args)
         {

@@ -9,15 +9,15 @@ namespace BodyTest1
     {
         public string Name { get; set; }
         string AlternateName { get; set; }
-        public Symptoms Symptoms { set; get; }
-        public Signs Signs { set; get; }
+        public List<Symptom> SymptomList { set; get; } //TODO make into a list<Symptoms>
+        public List<Sign> SignList { set; get; }
         public string InspectionMessage { set; get; }
 
         public Part()
         {
+            SymptomList = new List<Symptom>();
+            SignList = new List<Sign>();
 
-            Symptoms = new Symptoms();
-            Signs = new Signs();
         }
 
        

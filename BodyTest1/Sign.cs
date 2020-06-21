@@ -18,13 +18,6 @@ namespace BodyTest1
         {
 
         }
-
-
-        public void AddSign(Body body)
-        {
-            body.Signs.SignArray.Add(this);
-        }
-        
     }
 
     class Signs
@@ -45,7 +38,6 @@ namespace BodyTest1
         public Erythema(Body body)
         {
             Name = "erythema";
-            AddSign(body);
         }
     }
     class Edema : Sign

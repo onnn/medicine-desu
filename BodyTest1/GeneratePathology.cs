@@ -12,10 +12,10 @@ namespace BodyTest1
 
             var rand = new Random();
 
-            if (NormalDistribution.Random(0.5,0.1) < 1.0)
+            if (rand.Next(0,1) > 0)
             {
-                IrritantContactDermatitis irritantContactDermatitis = new IrritantContactDermatitis(body);
-                irritantContactDermatitis.Subtype = "acute"; 
+                body.Pathologies.PathologyList.Add(new IrritantContactDermatitis(body));
+                 
             }
                
             if (body.Record.Age < 25 && NormalDistribution.Random(0.5 ,0.1) < 1.0)

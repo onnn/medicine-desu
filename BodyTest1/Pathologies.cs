@@ -8,10 +8,10 @@ namespace BodyTest1
 {
     class Pathologies
     {
-        public ArrayList PathologyArray { set; get; }
+        public List<Pathology> PathologyList;
         public Pathologies()
         {
-
+            PathologyList = new List<Pathology>();
         }
     }
     class VertebralFracture : Pathology
@@ -30,7 +30,7 @@ namespace BodyTest1
             Name = "Irritant Contact Dermatitis";
             AlternateName = "ICD";
             ICD10 = "L24";
-            HashSet<string> Subtype = new HashSet<string>();
+            //HashSet<string> Subtype = new HashSet<string>();
 
             /*Subtype.Add("acute");
             Subtype.Add("acute delayed");
@@ -48,26 +48,16 @@ namespace BodyTest1
             var rand = new Random();
             var location = rand.Next(0, 1);
             Feature affectedFeature;
-            
-            if (Probability >= 0.0)
-            {
 
                 affectedFeature = location switch
                 {
                     0 => body.Features.Neck,
                     _ => body.Features.Neck,
                 };
-                //affectedFeature.Skins.Epidermis.Signs.SignArray.Add(new Blister(body));
-               // body.Features.Neck.Symptoms.SymptomArray.Add(new Rash());
-                //body.Features.Neck.Signs.SignArray.Add(new Erythema(body));
-                //body.Features.Neck.Skins.Epidermis.Add(new Blister(body));
-                
-            }
-            //if (rand >= 0.5)
-           // {
-                //body.Features.Neck.Symptoms.SymptomArray.Add(new Itching());
-                //body.Features.Neck.Signs.SignArray.Add(new Edema(body));
-            //}
+
+            affectedFeature.Skins.Epidermis.SignList.Add(new Erythema(body));
+            this.Subtype = "acute";
+              
         }
 
 

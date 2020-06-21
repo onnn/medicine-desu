@@ -13,6 +13,7 @@ namespace BodyTest1
         public Pores Pores { set; get; }
         public Skins()
         {
+            Epidermis = new Epidermis();
         }
 
     }
@@ -20,9 +21,9 @@ namespace BodyTest1
 
     class Epidermis : Part
     {
-        public Epidermis(Body body)
+        public Epidermis()
         {
-            //body.Features.Neck.Skins.Epidermis
+           
         }
     }
 

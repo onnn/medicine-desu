@@ -11,36 +11,35 @@ namespace BodyTest1
         {
             bool tryAgain = true;
             while (tryAgain == true)
-            {
+           {
                 body = new Body();
                 Console.WriteLine("Press i to visually inspect the patient");
                 Console.WriteLine("Press r to view the patient record");
                 var key = Console.ReadKey().KeyChar;
                 key = char.ToLower(key);
-                string input; 
+                string input;
+                ParseInput ParseInput = new ParseInput(body);
                 
                 if (key == 'i')
                 {
                     Console.WriteLine("\n");
-                   
-
-
-
-
+                  
                     try
                     {
-
-                        VisualInspection visualInspection = new VisualInspection(body.Features.InputHash[input = Console.ReadLine()]);
+                        ParseInput.FunctionHash[input = Console.ReadLine()];
+                        VisualInspection visualInspection = new VisualInspection(ParseInput.InputHash[input = Console.ReadLine()]);
                         tryAgain = false;
                     }
                     catch { Console.WriteLine("Try a valid bodypart"); }
                 }
                 else if (key == 's')
                 {
-                    foreach (Sign sign in body.Features.Neck.Signs.SignArray)
+                    body.Features.UpdateWounds();
+                    foreach (Sign sign in body.Features.FeatureList[0].SignList)
                     {
-                        Console.WriteLine(sign.ToString()); 
+                        Console.WriteLine(body.Features.FeatureList[0].SignList[0].Name);
                     }
+                    tryAgain = false;
                 }
                 else if (key == 'r')
                 {

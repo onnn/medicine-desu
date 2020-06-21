@@ -26,23 +26,24 @@ namespace BodyTest1
     class Features
     {
 
-        public Dictionary<string, Feature> InputHash{set; get; }
+        public List<Feature> FeatureList { set; get; }
         public Neck Neck { set; get; }
         public Features()
         {
             Neck = new Neck();
-            InputHash = new Dictionary<string, Feature>
-            {
-                { "neck", this.Neck }
-            };
+            FeatureList = new List<Feature>();
+            FeatureList.Add(Neck);
         }
-        public void UpdateWounds(Feature feature)
+        public void UpdateWounds()
         {
-            foreach (Feature f in InputHash.Values)
+            foreach (Feature Feature in FeatureList)
             {
-                foreach (Sign sign in feature.Skins.Epidermis.Signs.SignArray.ToArray())
+
+                foreach (Sign sign in Feature.Skins.Epidermis.SignList)
                 {
-                    f.Signs.SignArray.Add(sign);
+                    Console.WriteLine("testing");
+
+                    Feature.SignList.Add(sign);
                 }
             }
         }
@@ -218,6 +219,11 @@ namespace BodyTest1
     }
 
     class Vulva : Feature
+    {
+
+    }
+
+    class Anus : Feature
     {
 
     }
