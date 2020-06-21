@@ -8,17 +8,19 @@ using System.Text;
 
 //Visible things like skin and affect are here. Features in general are the lay terms that describe the body. Things that go here
 //are for things like symptoms and signs. And things a patient themselves would notice.
+//Features can also be considered things that are covered in epidermis, with some exceptions like toenails, hair, etc which might eventually
+//be placed in another category
 
 namespace BodyTest1
 {
     class Feature : Part
     {
         public string Name { set; get; }
-        public Skins Skins { set; get; }
+        public Skin Skins { set; get; }
 
         public Feature()
         {
-            Skins = new Skins();
+            Skins = new Skin();
         }
        
     }

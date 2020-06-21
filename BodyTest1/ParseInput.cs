@@ -21,21 +21,10 @@ namespace BodyTest1
             string SecondWord = input.Split(' ').GetValue(1).ToString();
             Feature SecondWordFeature = InputHash[SecondWord];
 
-            Console.WriteLine(FirstWord + " " + SecondWord); 
-
-            FunctionHash = new Dictionary<string, VisualInspection>()
-            {
-                {"inspect", new VisualInspection(body.Features.Neck) }
-            };
-
-            if (FirstWord == "inspect")
+            if (FirstWord == "inspect" && SecondWordFeature != null)
                 {
                 VisualInspection VisualInspection = new VisualInspection(SecondWordFeature);
                 }
-        }
-
-        public VisualInspection ParseVisualInspection()
-        {
 
         }
  

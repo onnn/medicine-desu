@@ -23,15 +23,6 @@ namespace BodyTest1
 
     }
 
-    class Parts
-    {
-
-    }
-
-    class System : Part
-    {
-
-    }
 
     class Region : Part
     {
@@ -62,7 +53,7 @@ namespace BodyTest1
 
     class Symptom
     {
-        public double probabilty { set; get; }
+        public double Probabilty { set; get; }
 
         public Symptom()
         {

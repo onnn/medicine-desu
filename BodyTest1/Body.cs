@@ -26,6 +26,11 @@ namespace BodyTest1
             Record = new Record();
         }
 
+        /// <summary>
+        /// This function accepts no arguments and returns no arguments. 
+        /// It writes each sign in the "global sign array"
+        /// Every single "part" has its own sign and symptom array. These are then added to the global (per patient) list in a different function.
+        /// </summary>
         public void DisplayAllSigns()
         {
             foreach (Sign sign in Signs.SignArray)
@@ -34,6 +39,10 @@ namespace BodyTest1
             }
         }
 
+        /// <summary>
+        /// This function accepts nothing and returns nothing.
+        /// It displays most of the properties in the Record class. Each patient has one record.
+        /// </summary>
         public void PrintPatientData()
         {
             Console.WriteLine(Record.FirstName + " " + Record.LastName);

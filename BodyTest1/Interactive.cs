@@ -6,7 +6,12 @@ namespace BodyTest1
 {
     class Interactive
     {
-
+        /// <summary>
+        /// The main menu offers the text based interface. The user types in a command, then a target. For instance, "inspect neck", takes the first
+        /// word and uses the VisualInspection() function, then the second word is taken and used as the argument. Other possibilities include 
+        /// "conduct MRI" or "ausciltate heart"
+        /// </summary>
+        /// <param name="body"></param>
         public void MainMenu(Body body)
         {
             bool tryAgain = true;
@@ -18,7 +23,6 @@ namespace BodyTest1
                 var key = Console.ReadKey().KeyChar;
                 key = char.ToLower(key);
                 string input;
-                ParseInput ParseInput = new ParseInput(body);
                 
                 if (key == 'i')
                 {
@@ -26,8 +30,7 @@ namespace BodyTest1
                   
                     try
                     {
-                        ParseInput.FunctionHash[input = Console.ReadLine()];
-                        VisualInspection visualInspection = new VisualInspection(ParseInput.InputHash[input = Console.ReadLine()]);
+                        ParseInput ParseInput = new ParseInput(input = Console.ReadLine(), body);
                         tryAgain = false;
                     }
                     catch { Console.WriteLine("Try a valid bodypart"); }

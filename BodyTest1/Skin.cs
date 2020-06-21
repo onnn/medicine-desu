@@ -4,6 +4,9 @@ using System.Text;
 
 namespace BodyTest1
 {
+    /// <summary>
+    /// Currently, skins are members of each Feature. Like Part : Feature -> Skins -> Epi,Der,SCT : Part
+    /// </summary>
     class Skins
     {
         public Epidermis Epidermis { set; get; }

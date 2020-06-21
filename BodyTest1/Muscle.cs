@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
+
+
 namespace BodyTest1
 {
-
+    /// <summary>
+    /// The current plan is for the structure to be Part : Muscle : Abductor, where as the Muscles class will contain each and every muscle in a list.
+    /// </summary>
     class Abductor : Muscle
     {
 

@@ -4,8 +4,7 @@ using System.Text;
 
 namespace BodyTest1
 {
-    class Sys
+    class Region
     {
-
     }
 }
