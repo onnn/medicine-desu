@@ -16,6 +16,7 @@ namespace BodyTest1
         public Pathologies Pathologies { get; set; } 
         public Record Record { get; set; }
         public Signs Signs { get; set; }
+        public Parts Parts { set; get; }
         public Body()
         {
 

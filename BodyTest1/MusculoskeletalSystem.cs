@@ -9,5 +9,9 @@ namespace BodyTest1
         public List<Part> MusculoskeletalSystemParts; 
 
         public MusculoskeletalSystem()
+        {
+            MusculoskeletalSystemParts = new List<Part>(); 
+
+        }
     }
 }

@@ -22,4 +22,12 @@ namespace BodyTest1
 
        
     }
+
+    class Parts
+    {
+        public Parts()
+        {
+            
+        }
+    }
 }

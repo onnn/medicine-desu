@@ -6,7 +6,7 @@ using System.Text;
 namespace BodyTest1
 {
 
-    class Bone : Structure
+    class Bone : Part
     {
         public double FractureSeverity { set; get; } // 0 = No fracture; between 0 and 0.49. 0.5+ Break; 0.8 Severe Break; 0.9 Shattered; 1.0 Powder
         public string FractureOrientation { set; get; } //transverse, oblique or spiral
@@ -51,10 +51,6 @@ namespace BodyTest1
 
     }
 
-    class Gland : Structure
-    {
-
-    }
 
     class LymphaticVessel : Structure
     {

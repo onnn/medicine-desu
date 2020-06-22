@@ -57,7 +57,7 @@ namespace BodyTest1
 
         public Symptom()
         {
-            probabilty = 0; 
+            //probabilty = 0; 
         }
     }
 
